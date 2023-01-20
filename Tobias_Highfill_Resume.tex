@@ -1,0 +1,140 @@
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\usepackage{makecell}
+\renewcommand{\cellalign}{cl}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    % urlcolor=black, 
+    urlcolor=red     % can put red here to better visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.40}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubsubheading}[2]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textit{#1} & \textit{#2} \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\myemail}{tobias.highfill@gmail.com}
+\newcommand{\mywebsite}{https://github.com/t-highfill}
+\newcommand{\linkedin}{https://www.linkedin.com/in/tobias-highfill-5651a894/}
+
+\newcommand{\smallsect}[1]{{\footnotesize #1}}
+
+\begin{document}
+
+\newcommand{\myheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{\href{\mywebsite}{\LARGE Tobias Highfill}} & \href{mailto:\myemail}{\myemail}\\
+	233 Highwood Ave. & \href{\mywebsite}{\mywebsite} \\
+	Ridgewood, NJ 07450 & \href{\linkedin}{\linkedin} \\
+	(201) 753-0663 & \smallsect{\textit{Red text indicates a hyperlink}} \\
+	\end{tabular*}
+\\
+\vspace{0.1in}}
+
+% CHANGE HEADER SOURCE HERE
+\myheader
+
+%% EDUCATION
+\resheading{Education}
+\begin{itemize}
+	\item \ressubheading{\href{https://drexel.edu/}{Drexel University}}{Philadelphia, PA}{Bachelor of Science in Computer Science; GPA:3.72}{Sept. 2013 -- Jun. 2019}
+		\smallsect{
+		\begin{itemize}
+			\resitem{Key Courses: Computer Graphics, Interactive Computer Graphics, Computational Photography, Artificial Intellignce, Machine Learning, Data Structures, Systems Programming, Systems Architecture, Software Design, Graphical User Interfaces, Software Engineering, Database Systems, Theory of Computation, Programming Language Concepts, Web and Mobile App Development}
+		\end{itemize}
+		}
+\end{itemize}
+
+%% EXPERIENCE
+\resheading{Experience}
+\begin{itemize}
+	\item \ressubheading{\href{https://outofhandinteractive.wordpress.com/}{Out of Hand Interactive}}{Philadelphia, PA}{Game Programmer}{Sept. 2018 -- Present}
+		\smallsect{
+		\begin{itemize}
+			\resitem{Assisted in the design and implementation of state-based enemy AI}
+			\resitem{Implemented the music and sound effect systems}
+			\resitem{Fixed various bugs and cleaned up code throughout the project}
+			\resitem{Created and documented multiple unit tests}
+		\end{itemize}
+		}
+	\item \ressubheading{\href{https://boomi.com/}{Dell Boomi}}{Chesterbrook, PA}{Intern Undergrad 2}{Sept. 2017 -- Aug. 2018}
+		\smallsect{
+		\begin{itemize}
+			\resitem{Designed and built a \href{https://help.boomi.com/bundle/connectors/page/r-atm-Disk_(Tech_Preview)_connector_22089cbd-04c8-4437-a809-8a70c1d85afb.html}{new disk connector component}}
+			\resitem{Participated in Agile development processes such as stand-up meetings, story groomings, and post-sprint retros}
+			\resitem{Helped develop ML systems to predict execution time of user processes and to assist users in optimizing their execution schedules}
+		\end{itemize}
+		}
+		\ressubsubheading{Intern Undergrad 1}{Sept. 2016 -- Mar. 2017}
+		\smallsect{
+		\begin{itemize}
+			\resitem{Designed and built a new connector component for Twitter}
+			\resitem{Updated an old connector to expose new API features}
+			\resitem{Participated in Agile development processes such as stand-up meetings, story groomings, and post-sprint retros}
+			\resitem{Developed an app for users to receive alerts about Boomi service outages and other events}
+		\end{itemize}
+		}
+\end{itemize}
+
+%% SKILLS
+\resheading{Skills}
+\begin{description}
+	\item[Technologies:] \smallsect{
+		Java, C\#, C/C++, Haskell, Python, PostgreSQL, GLSL, HTML, CSS, JavaScript, TypeScript, JUnit Framework, Maven, Gradle, Android Development, SVN, Git, Regex, Unix Shell Scripting, JSON, XML, \LaTeX, ffmpeg, Windows 7+, Linux (Debian 8+), OS installation (single and dual boot), Adobe Photoshop and Illustrator
+	}
+	\item[Personal and Professional:] \smallsect{
+		Work well in teams, experienced with Agile development (approx. 18 months), good at solving problems
+	}
+	\item[Hobbies:] \smallsect{
+		\href{https://projecteuler.net/profile/colossus16.png}{Programming Puzzles}, \href{https://codegolf.stackexchange.com/}{Code Golf}, Drawing, Painting Miniatures, Reading, Video Games, Anime \& Manga
+	}
+\end{description}
+
+%% PROJECTS
+\resheading{Projects}
+\begin{description}
+	\item[\href{https://outofhandinteractive.wordpress.com/raider-road/}{Raider Road}:] \smallsect{
+		A Unity Engine game developed by Out of Hand interactive about a family road trip gone wrong. The players must work together to fight off bands of raiders trying to destroy their RV. My role was as a generalist programmer; our leader assigned me to various tasks.
+	}
+	\item[\href{https://github.com/t-highfill/Ambi}{Ambi}:] \smallsect{
+		A Java Swing based GUI application for reading e-books while listening to a curated soundtrack. Books are stored as zip files containing the pages of the book, the music, and a JSON metadata file. I designed and built this application by myself for a class.
+	}
+	\item[\href{https://github.com/Team-Sigma/PhotoStream}{PhotoStream}:] \smallsect{
+		An Android app to aggregate images from various social media outlets into one continuous feed. This was a group project but I contributed almost all of the code.
+	}
+\end{description}
+
+\end{document}
